@@ -1,0 +1,14 @@
+<div class="product-detail">
+  <div class="product-image">
+    <img
+      [src]="(products$ | async)?.thumbnail"
+      [alt]="(products$ | async)?.title"
+    />
+  </div>
+  <div class="product-info">
+    <h1>{{ (products$ | async)?.title }}</h1>
+    <p><strong>Price:</strong> ${{ (products$ | async)?.price }}</p>
+    <p><strong>Description:</strong> {{ (products$ | async)?.description }}</p>
+    <!-- Add more product details here as needed -->
+  </div>
+</div>
